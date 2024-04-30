@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "name": "exerciciobackend",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {
+    "esm": "^3.2.25",
+    "nodemon": "^3.1.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "type": "module"
+  },
+  "keywords": [],
+  "author": "Roberto Furlan",
+  "license": "ISC",
+  "description": ""
+}

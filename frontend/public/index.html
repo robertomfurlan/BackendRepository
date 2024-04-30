@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shoppingListApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div ng-controller="ShoppingListController as vm" class="container">
+        <h1>Lista de Compras</h1>
+        <div class="form">
+            <input type="text" ng-model="vm.newItem.name" placeholder="Nome do Item">
+            <input type="number" ng-model="vm.newItem.quantity" placeholder="Quantidade">
+            <button ng-click="vm.addItem()">Adicionar Item</button>
+        </div>
+        <ul>
+            <li ng-repeat="item in vm.items track by $index">
+                <span ng-bind="item.name"></span> - <span ng-bind="item.quantity"></span>
+                <button class="delete-button" ng-click="vm.deleteItem($index)">Deletar</button>
+            </li>
+        </ul>
+    </div>
+    <script src="assets/scripts.js"></script>
+</body>
+</html>
